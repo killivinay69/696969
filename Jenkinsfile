@@ -46,5 +46,15 @@ spec:
                 sh 'docker build -t killivinay69/myapp .'
             }
         }
+        stage('docker login') {
+           steps {
+              sh 'docker login -u killivinay69 -p @Vinay1999'
+           }
+         }
+         stage('docker push') {
+           steps {
+             sh 'docker push killivinay69/myapp'
+            }
+          }
     }
 }
