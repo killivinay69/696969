@@ -52,7 +52,7 @@ spec:
             }
         }
         stage('docker push') {
-           steps {
-              sh 'docker push killivinay69/myapp'
-    }
-}
+            steps {
+               sh 'docker push killivinay69/myapp'
+            }
+        }
