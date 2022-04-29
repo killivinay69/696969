@@ -56,5 +56,10 @@ spec:
                sh 'docker push killivinay69/myapp'
             }
         }
+        stages('deploy') {
+            steps {
+                sh 'kubectl apply -f Deployment.yaml'
+            }
+        }
        }
 }
