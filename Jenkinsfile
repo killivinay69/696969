@@ -56,5 +56,42 @@ spec:
              sh 'docker push killivinay69/myapp'
             }
           }
+        apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: myapp
+
+spec:
+
+  selector:
+
+    matchLabels:
+
+      run: myapp
+
+  replicas: 1
+
+  template:
+
+    metadata:
+
+      labels:
+
+        run: myapp
+
+    spec:
+
+      containers:
+
+      - name: myapp
+
+        image: killivinay69/myapp
+
+        ports:
+
+        - containerPort: 5000
     }
 }
