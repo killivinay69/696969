@@ -56,3 +56,5 @@ spec:
                sh 'docker push killivinay69/myapp'
             }
         }
+       }
+}
