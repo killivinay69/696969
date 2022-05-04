@@ -1,0 +1,22 @@
+apiVersion: v1
+
+kind: Service
+
+metadata:
+
+  name: myapp
+  namespace: jenkins
+
+spec:
+
+  type: NodePort
+
+  selector:
+
+    run: myapp
+
+  ports:
+
+  - port: 80
+
+    targetPort: 80
