@@ -34,7 +34,7 @@ spec:
 
   - name: shell
 
-    image: registry.glams.com/glams/jenkins-agent:latest
+    image: anandsadhu/dotnet-jenkins-slave
 
     command:
 
