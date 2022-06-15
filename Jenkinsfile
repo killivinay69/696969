@@ -114,9 +114,8 @@ spec:
 
     }
 
-       stage('Deploy')
+       stage('Deploy') {
 
-{
 
     steps{
 
@@ -127,7 +126,8 @@ spec:
     sh 'kubectl apply -f service.yaml'
 
         }
-  }
+       }
+      }
     stage("install helm"){
        steps {
             sh 'wget https://get.helm.sh/helm-v3.6.1-linux-amd64.tar.gz'
